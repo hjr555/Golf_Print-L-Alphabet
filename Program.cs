@@ -4,21 +4,21 @@ class Program
 {
     static void Main()
     {
-        int loop = 0;
-        int position = 0;
-        int letter = 65;
+        int x = 0;
+        int y = 0;
+        int z = 65;
 
-        while(loop<26)
+        while(x<26)
         {
-            var j = loop < position ? (position+65) : (letter + loop);
+            var j = x < y ? (y+65) : (z + x);
 
             Console.Write((char)j);
 
-            if(++loop == 26 && position < 25)
+            if(++x == 26 && y < 25)
             {
-                loop = 0;
-                letter = 65;
-                position++;
+                x = 0;
+                z = 65;
+                y++;
                 Console.WriteLine();
             }
         }
