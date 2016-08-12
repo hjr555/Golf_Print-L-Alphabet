@@ -10,17 +10,15 @@ class Program
 
         while(loop<26)
         {
-            var x = loop < position ? (position+65) : (letter + loop);
+            var j = loop < position ? (position+65) : (letter + loop);
 
-            Console.Write((char)x);
+            Console.Write((char)j);
 
-            loop++;
-
-            if(loop == 26 && position < 25)
+            if(++loop == 26 && position < 25)
             {
                 loop = 0;
-                position++;
                 letter = 65;
+                position++;
                 Console.WriteLine();
             }
         }
