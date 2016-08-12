@@ -2,8 +2,6 @@
 
 class Program
 {
-    char[] a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-
     static void Main()
     {
         int loop = 0;
@@ -12,14 +10,9 @@ class Program
 
         while(loop<26)
         {
-            if(loop < position)
-            {
-                Console.Write((char)(position+65));
-            }
-            else
-            {
-                Console.Write((char)(letter + loop));
-            }
+            var x = loop < position ? (position+65) : (letter + loop);
+
+            Console.Write((char)x);
 
             loop++;
 
